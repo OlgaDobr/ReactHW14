@@ -45,7 +45,7 @@ function App() {
     setInputText(e.target.value);
   };
 
-  const transliteratedText = Transliterateransliterate(inputText);
+  const transliterateText = Transliterate(inputText);
 
   return (
     <div style={{ padding:'20px' }}>
@@ -61,7 +61,7 @@ function App() {
         <label>Транслитерированный текст:</label>
         <textarea
           rows={4}
-          value={transliteratedText}
+          value={transliterateText}
           readOnly
         />
       </div>

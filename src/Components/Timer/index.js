@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-function Timer() {}
+function Timer() {
   const [seconds, setSeconds] = useState(0); // Время в секундах
   const [timeLeft, setTimeLeft] = useState(0); // Оставшееся время
   const [isRunning, setIsRunning] = useState(false);
@@ -67,7 +67,7 @@ function Timer() {}
   <div style={{ padding: '20px', maxWidth: '300px' }}>
       <h2>Таймер</h2>
       
-      <></>
+      
       <input
         type="number"
         placeholder="Введите секунды"
@@ -80,19 +80,9 @@ function Timer() {}
       <div style={{ marginBottom: '10px' }}>
         <strong>Оставшееся время: </strong> {timeLeft} секунд
       </div>
-      intervalRef.current = setInterval(()  {
-        setTimeLeft((prev) => {
-          if (prev > 1) {
-            return prev - 1;
-          } else {
-            clearInterval(intervalRef.current);
-            setIsRunning(false);
-            return 0;
-          }
-        })
-      }, 1000);
+     </div>
     
-  
+  )
 
   return (
     <div style={{ padding: '20px', maxWidth: '300px' }}>
@@ -119,6 +109,6 @@ function Timer() {}
       <button onClick={stopTimer}>Стоп</button>
     </div>
   );
-
+}
 
 export default Timer;
